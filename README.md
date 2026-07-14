@@ -60,7 +60,7 @@ A **40 × 40 shared canvas** (1,600 tiles) that every visitor shares simultaneou
                          │  WebSocket (persistent)
                          ▼
 ┌──────────────────────────────────────────────────────────────┐
-│                    NODE / EXPRESS SERVER                      │
+│                    NODE / EXPRESS SERVER                     │
 │                                                              │
 │  gateway.ts ── Socket.IO event handlers                      │
 │    ├─ connection  → resolve/create player, send init payload │
@@ -75,13 +75,13 @@ A **40 × 40 shared canvas** (1,600 tiles) that every visitor shares simultaneou
              │                        │
              ▼                        ▼
 ┌────────────────────┐    ┌────────────────────────┐
-│       REDIS        │    │      POSTGRESQL         │
-│                    │    │                          │
-│  ctb:board (hash)  │    │  players (id, name,     │
-│  ctb:lb (zset)     │    │           color)         │
-│  ctb:cd:* (expiry) │    │  tiles (idx, owner_id,   │
-│  ctb:dirty (set)   │    │         color,            │
-│  ctb:player:* (h)  │    │         updated_at)       │
+│       REDIS        │    │      POSTGRESQL        │
+│                    │    │                        │
+│  ctb:board (hash)  │    │  players (id, name,    │
+│  ctb:lb (zset)     │    │           color)       │
+│  ctb:cd:* (expiry) │    │  tiles (idx, owner_id, │
+│  ctb:dirty (set)   │    │         color,         │
+│  ctb:player:* (h)  │    │         updated_at)    │
 └────────────────────┘    └────────────────────────┘
 ```
 
