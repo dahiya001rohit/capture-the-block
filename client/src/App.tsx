@@ -2,8 +2,11 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
 import { BoardPage } from './pages/BoardPage';
 import { AboutPage } from './pages/AboutPage';
+import { useSocket } from './state/useSocket';
 
 export const App = () => {
+  useSocket();
+
   return (
     <BrowserRouter>
       <Routes>

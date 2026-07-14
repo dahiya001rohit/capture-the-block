@@ -5,10 +5,9 @@ import { Cooldown } from '../components/board/Cooldown';
 import { Leaderboard } from '../components/board/Leaderboard';
 import { Footer } from '../components/board/Footer';
 import { Toast } from '../components/board/Toast';
-import { useSocket, claimTile, renameMe } from '../state/useSocket';
+import { claimTile, renameMe } from '../state/useSocket';
 
 export function BoardPage() {
-  useSocket();
 
   return (
     <div className="flex h-screen min-h-[560px] flex-col overflow-hidden bg-black">
