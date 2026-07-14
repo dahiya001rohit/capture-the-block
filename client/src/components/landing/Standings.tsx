@@ -12,7 +12,7 @@ const ROWS = [
 
 export function Standings() {
   return (
-    <section className="mx-auto grid max-w-[1280px] grid-cols-[repeat(auto-fit,minmax(300px,1fr))] items-start gap-10 px-8 pb-28">
+    <section className="mx-auto grid max-w-[1280px] grid-cols-[repeat(auto-fit,minmax(280px,1fr))] items-start gap-10 px-4 md:px-8 pb-20 md:pb-28">
       <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={viewport}>
         <span className="font-mono text-xs tracking-[0.04em] text-[#555555]">[ standings ]</span>
         <h2 className="mb-6 mt-3.5 font-mono text-[clamp(28px,4vw,40px)] font-semibold tracking-[-0.03em]">

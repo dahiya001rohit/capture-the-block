@@ -24,8 +24,8 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="mx-auto max-w-[1280px] px-8 py-28">
-      <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={viewport} className="mb-14">
+    <section className="mx-auto max-w-[1280px] px-4 md:px-8 py-20 md:py-28">
+      <motion.div variants={reveal} initial="hidden" whileInView="show" viewport={viewport} className="mb-10 md:mb-14">
         <span className="font-mono text-xs tracking-[0.04em] text-[#555555]">[ how it works ]</span>
         <h2 className="mt-3.5 font-mono text-[clamp(28px,4vw,44px)] font-semibold tracking-[-0.03em]">
           Three clicks to chaos.
@@ -37,10 +37,10 @@ export function HowItWorks() {
         initial="hidden"
         whileInView="show"
         viewport={viewport}
-        className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-px overflow-hidden rounded-xl border border-[#1A1A1A] bg-[#1A1A1A]"
+        className="grid grid-cols-1 md:grid-cols-3 gap-px overflow-hidden rounded-xl border border-[#1A1A1A] bg-[#1A1A1A]"
       >
         {STEPS.map((s) => (
-          <motion.div key={s.num} variants={staggerItem} className="bg-[#0A0A0A] px-8 py-9">
+          <motion.div key={s.num} variants={staggerItem} className="bg-[#0A0A0A] px-6 md:px-8 py-7 md:py-9">
             <div className='flex items-center gap-3'>
               <div className="mb-3 font-mono text-[22px]" style={{ color: s.color }}>{s.num}</div>
               <h3 className="mb-3 font-mono text-[22px] font-semibold tracking-[-0.02em] ">{s.title}</h3>

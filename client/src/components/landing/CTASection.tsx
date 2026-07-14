@@ -12,7 +12,7 @@ export function CTASection() {
         initial="hidden"
         whileInView="show"
         viewport={viewport}
-        className="mx-auto max-w-[1280px] px-8 py-30 text-center"
+        className="mx-auto max-w-[1280px] px-4 md:px-8 py-20 md:py-30 text-center"
       >
         <h2 className="mb-7 font-mono text-[clamp(36px,6vw,72px)] font-bold leading-none tracking-[-0.04em] bg-gradient-to-b from-white to-[#444444] bg-clip-text text-transparent">
           The board is<br />already moving.

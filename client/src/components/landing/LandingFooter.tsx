@@ -3,7 +3,7 @@ const LOGO = ['#FF5470', '#4ADE80', '#3BA9FF', '#FFC93C'];
 export function LandingFooter() {
   return (
     <footer className="border-t border-[#1A1A1A]">
-      <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-4 px-8 py-7">
+      <div className="mx-auto flex max-w-[1280px] flex-col sm:flex-row flex-wrap items-center justify-between gap-4 px-4 md:px-8 py-7">
         <div className="flex items-center gap-2.5">
           <div className="grid grid-cols-2 gap-[2px]">
             {LOGO.map((c) => (
@@ -12,7 +12,7 @@ export function LandingFooter() {
           </div>
           <span className="font-mono text-[13px] text-[#8E8E8E]">capture/the/block</span>
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 mt-2 sm:mt-0 text-center sm:text-left">
           <a
             href="https://github.com/dahiya001rohit/capture-the-block"
             target="_blank"

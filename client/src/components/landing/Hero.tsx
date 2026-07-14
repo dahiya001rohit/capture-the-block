@@ -65,7 +65,7 @@ export function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section className="mx-auto flex max-w-[1280px] flex-wrap items-center gap-14 px-8 pb-24 pt-[72px]">
+    <section className="mx-auto flex max-w-[1280px] flex-wrap items-center gap-8 md:gap-14 px-4 md:px-8 pb-16 md:pb-24 pt-10 md:pt-[72px]">
       <motion.div
         className="min-w-[320px] flex-[1_1_420px]"
         variants={container}
@@ -101,11 +101,11 @@ export function Hero() {
         <motion.div variants={item} className="flex flex-wrap items-center gap-4">
           <button
             onClick={() => navigate('/board')}
-            className="cursor-pointer rounded-lg bg-[#F5F5F5] px-7 py-[15px] font-mono text-[15px] font-semibold text-black transition-transform duration-200 hover:-translate-y-0.5"
+            className="cursor-pointer rounded-lg bg-[#F5F5F5] px-6 md:px-7 py-3.5 md:py-[15px] font-mono text-[13px] md:text-[15px] font-semibold text-black transition-transform duration-200 hover:-translate-y-0.5 w-full md:w-auto"
           >
             Enter the board →
           </button>
-          <span className="font-mono text-[13px] text-[#555555]">No login · pick a color · go</span>
+          <span className="font-mono text-[11px] md:text-[13px] text-[#555555] mx-auto md:mx-0">No login · pick a color · go</span>
         </motion.div>
       </motion.div>
 
