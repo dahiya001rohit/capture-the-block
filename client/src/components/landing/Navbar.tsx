@@ -27,6 +27,12 @@ export function Navbar() {
           1,284 online
         </span>
         <button
+          onClick={() => navigate('/about')}
+          className="cursor-pointer rounded-md border border-[#F5F5F5] px-4 py-[9px] font-mono text-[13px] font-medium text-[#F5F5F5] transition-transform duration-200 hover:-translate-y-px"
+        >
+          About
+        </button>
+        <button
           onClick={() => navigate('/board')}
           className="cursor-pointer rounded-md bg-[#F5F5F5] px-4 py-[9px] font-mono text-[13px] font-medium text-black transition-transform duration-200 hover:-translate-y-px hover:bg-white"
         >

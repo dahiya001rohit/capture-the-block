@@ -11,7 +11,7 @@ import {
 
 export function LandingPage() {
   return (
-    <div className="w-full overflow-x-hidden bg-black text-[#F5F5F5]">
+    <div className="w-full overflow-x-clip bg-black text-[#F5F5F5]">
       <Navbar />
       <Hero />
       <MarqueeTicker />
