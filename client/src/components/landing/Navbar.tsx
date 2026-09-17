@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStore } from '../../state/store';
+import { useNotice } from '../../state/notice';
 
 const LOGO = ['#FF5470', '#4ADE80', '#3BA9FF', '#FFC93C'];
 
@@ -8,10 +9,11 @@ export function Navbar() {
   const navigate = useNavigate();
   const onlineCount = useStore((s) => s.online);
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const notice = useNotice((state) => state.notice);
+  
   return (
     <>
-      <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-[#1A1A1A] bg-black/60 px-4 min-[650px]:px-8 py-4 min-[650px]:py-5 backdrop-blur-md">
+      <nav className={`sticky ${!notice ? 'top-0' : 'top-14 min-[650px]:top-8'} z-50 flex items-center justify-between border-b border-[#1A1A1A] bg-black/60 px-4 min-[650px]:px-8 py-4 min-[650px]:py-5 backdrop-blur-md`}>
         <div className="flex items-center gap-2.5">
           <div className="grid grid-cols-2 gap-[2px]">
             {LOGO.map((c) => (
@@ -56,7 +58,7 @@ export function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="min-[650px]:hidden fixed top-[57px] left-0 w-full bg-[#0A0A0A] border-b border-[#1A1A1A] z-40 flex flex-col px-6 py-4 gap-2 shadow-xl">
+        <div className={`min-[650px]:hidden fixed ${notice ? 'top-[113px]' : 'top-[57px]'} left-0 w-full bg-[#0A0A0A] border-b border-[#1A1A1A] z-40 flex flex-col px-6 py-4 gap-2 shadow-xl`}>
           <button
             onClick={() => { setMenuOpen(false); navigate('/about'); }}
             className="w-full text-left font-mono text-[14px] text-[#F5F5F5] py-3"
